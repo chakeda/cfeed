@@ -20,3 +20,25 @@ cfeed aims simplicity like Feedjit, but functionality like statcounter. cfeed’
 cfeed produces a script that the webmaster puts on the website header or sidebar. The script sends visitor data to the chakeda.com database. The visitor data is posted on live.php?website=thewebsitecom. 
 
 So, it is very similar to Feedjit; but simple, open source, and (in the future) more functionality. 
+
+
+
+=====
+
+TODO
+
+=====
+
+Conceptual
+ - Coloring of IPs for individual visitor tracking
+ - Daily/Weekly/Monthly amount of website impressions count
+ - Ability to host cFeed on the user’s website, so they can see the feed on their own website instead of chakeda.com
+ - Visitor’s time spent on the website until next imp
+ - Further traffic analysis, like Statcounter’s graphs
+
+Simple
+ - Limit on display length of URL 
+ - SQL different ORDER BY commands through click on table header
+ - SQL table speed/data optimization
+ - Remove debug display for AJAX
+ - cFeed logo, stylesheet optimization
