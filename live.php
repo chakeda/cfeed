@@ -56,7 +56,7 @@ $(document).ready(function() {
 
 if (isset($_GET['website']))
 {
-    echo "<br /><br /><p>Hello ".$website.".</p>";
+    echo "<br /><br /><p>Tracking Website Traffic Live for ".$website.".</p><hr />";
     echo '<div id="data"><br /><h3>Click here to refresh your feed.</h3><br /></div>';
 }
 else

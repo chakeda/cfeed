@@ -56,7 +56,7 @@ class functions extends database {
                 $sql = "CREATE TABLE 
                     `chakedadata`.`cfeed_".$website."` 
                     (
-                    `id` TINYINT(5) NOT NULL AUTO_INCREMENT,
+                    `id` INT(200) NOT NULL AUTO_INCREMENT,
                     `ip` VARCHAR(30),
                     `camefrom` VARCHAR(100),
                     `cameto` VARCHAR(100),

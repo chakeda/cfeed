@@ -10,7 +10,7 @@ You will then receive JavaScript code to add to your website.</p>
 <form action="insert.php" method="post">
     <p>Website URL</p>
         <input type="text" name="website">
-    <p>Password</p>
+    <p>Password (optional)</p>
         <input type="password" name="password">
     <p>Platform</p>
         <select name="platform">

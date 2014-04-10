@@ -31,15 +31,17 @@ var favicon = 'http://www.google.com/s2/favicons?domain=' + camefrom;
 var ip = "<? echo $_SERVER['REMOTE_ADDR']; ?>";
 var cameto = window.location.href;
 var timestamp = "<? echo date("F j, Y; g:i a"); ?>";
+var country = "<? echo $geo['country_name']; ?>";
+var city = "<? echo $geo['city']; ?>";
 
 $(function() { 
 
     window.onload=function(){
         xhr = $.ajax({
-                url: 'http://www.chakeda.com/cfeed/senddata.php',
+                url: 'http://www.chakeda.com/cfeed/senddata.php', // 'senddata.php' is called atm
                 type: 'POST',
                 crossDomain: true,
-                data: {website: website, camefrom: camefrom, favicon: favicon, ip: ip, cameto: cameto, timestamp: timestamp},
+                data: {website: website, camefrom: camefrom, favicon: favicon, ip: ip, cameto: cameto, timestamp: timestamp, country: country, city: city },
                 success:function(result){
                     console.log('#result', arguments);
                 },
