@@ -31,8 +31,6 @@ var favicon = 'http://www.google.com/s2/favicons?domain=' + camefrom;
 var ip = "<? echo $_SERVER['REMOTE_ADDR']; ?>";
 var cameto = window.location.href;
 var timestamp = "<? echo date("F j, Y; g:i a"); ?>";
-var country = "<? echo $geo['country_name']; ?>";
-var city = "<? echo $geo['city']; ?>";
 
 $(function() { 
 
