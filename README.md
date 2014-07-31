@@ -5,13 +5,11 @@ Open Source Live Website Traffic Feed
 
 =====
 
+DESCRIPTION
+
+=====
+
 cfeed is an open source web application similar to Feedjit that tracks a website’s internet traffic in real time. 
-
-You can see it live here: 
-http://www.chakeda.com/cfeed/live.php?website=chakedacom
-
-Feel free to use it as well. It is deployed here:
-http://www.chakeda.com/cfeed/
 
 There are three main ways to analyze web traffic: Feedjit, Statcounter, and Google Analytics. cfeed aims a middle ground between those three applications. 
 
@@ -21,6 +19,31 @@ cfeed produces a script that the webmaster puts on the website header or sidebar
 
 So, it is very similar to Feedjit; but simple, open source, and (in the future) more functionality. 
 
+=====
+
+HOW TO USE:
+
+=====
+
+The website's been offline since June 24th. cFeed is still on Github, and is deployable locally or on your website if you want open source web traffic monitoring. You will need a website/server, PHP 5.3, and MySQL 5.x
+
+However, 4 things in the code must be changed before it can be deployed.
+
+- header.php:
+Images and direct links are still pointing to chakeda.com. Simply ctrl-f "chakeda" in this file, ignore them or delete them all. [not required]
+
+- functions.php:
+In generateCode(), Change $script_code content to point to your server/website instead. All three variants.
+
+- datauc.php; data.php; datablogger.php:
+In the AJAX code, (url: http://www.chakeda.com/cfeed/senddata.php), point it to your website instead
+
+- database.php
+Put your database details here
+
+Simply make a directory /cfeed/ in your web root folder, and drop all the cfeed files in it. Then go to /cfeed/index.php and simply follow the prompts. Now you are tracking your (and maybe others) web traffic for free open source style.
+
+Feel free to fork. I will improve cFeed when I feel like it
 
 
 =====
