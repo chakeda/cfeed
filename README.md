@@ -5,6 +5,10 @@ Open Source Live Website Traffic Feed
 
 =====
 
+http://imgur.com/JwA0LkC
+
+=====
+
 DESCRIPTION
 
 =====
@@ -27,10 +31,16 @@ HOW TO USE:
 
 The website's been offline since June 24th. cFeed is still on Github, and is deployable locally or on your website if you want open source web traffic monitoring. You will need a website/server, PHP 5.3, and MySQL 5.x
 
-However, 4 things in the code must be changed before it can be deployed.
+However, 3 things in the code must be changed before it can be deployed. Last three are optional.
 
-- header.php:
-Images and direct links are still pointing to chakeda.com. Simply ctrl-f "chakeda" in this file, ignore them or delete them all. [not required]
+ - cfeed_members.sql (optional)
+Run this file in your MySQL to create a member database. The database is useless to the functioning of cfeed but can be used for organizing which websites you are tracking, and can be extended to password protect traffic feeds.
+
+- cfeed_chakedacom.sql (optional)
+Run this file in your MySQL to get an example of web traffic data which can be viewed at (/cfeed/live.php?=chakedacom)
+
+- header.php: (optional)
+Images and direct links are still pointing to chakeda.com. Simply ctrl-f "chakeda" in this file, ignore them or delete them all. 
 
 - functions.php:
 In generateCode(), Change $script_code content to point to your server/website instead. All three variants.
