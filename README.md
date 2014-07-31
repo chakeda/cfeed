@@ -15,23 +15,25 @@ DESCRIPTION
 
 =====
 
-cfeed is an open source web application similar to Feedjit that tracks a website’s internet traffic in real time. 
+cfeed is an open source web application similar to Feedjit that tracks a website’s internet traffic in real time.
 
-There are three main ways to analyze web traffic: Feedjit, Statcounter, and Google Analytics. cfeed aims a middle ground between those three applications. 
+It can be installed locally on your own web server or your website, something unprecedented in web traffic analyzers. This allows privacy of your web traffic, and the facilitation of checking it. No longer do you have to login or see advertisements when you want to monitor your website's traffic. Being open source, you can also edit it to your needs. 
 
-cfeed aims simplicity like Feedjit, but functionality like statcounter. cfeed’s current outlook resembles that of feedjit: however, it has a little bit more functionality, such as listing IP. It doesn't have browser/OS data like Feedjit does, because it seems unnecessary. Currently cfeed has a function that gets visitor data from http://freegeoip.net, so a lot more information can be listed, so long as the front end is developed. 
+There are three main ways to analyze web traffic: Feedjit, Statcounter, and Google Analytics. cfeed functionality aims a middle ground between those three applications. 
 
-cfeed produces a script that the webmaster puts on the website header or sidebar. The script sends visitor data to the chakeda.com database. The visitor data is posted on live.php?website=thewebsitecom. 
+cfeed aims visual simplicity like Feedjit, but rich in data like statcounter. cfeed’s current outlook resembles that of Feedjit. Currently cfeed has a function that gets visitor data from http://freegeoip.net, so a lot more information can be listed, so long as the front end is developed. 
 
-So, it is very similar to Feedjit; but simple, open source, and (in the future) more functionality. 
+cfeed produces a script to put on a website's header or sidebar. The script sends visitor data to the cfeed database. The visitor data is posted on live.php?website=thewebsitebeingtrackedcom. 
 
-=====
-
-HOW TO USE:
+So cFeed is an open source web traffic retrieval web application that can be installed locally or on a website. All you need to do is paste javascript on the website and the web traffic data is sent to you. 
 
 =====
 
-The website's been offline since June 24th. cFeed is still on Github, and is deployable locally or on your website if you want open source web traffic monitoring. You will need a website/server, PHP 5.3, and MySQL 5.x
+HOW TO USE: Written July 31st
+
+=====
+
+chakeda.com (where cFeed was formerly hosted) has been offline since June 24th. cFeed is still here on Github, and is deployable locally or on your website if you want open source web traffic monitoring. You will need a website/server, PHP 5.3, and MySQL 5.x
 
 However, 3 things in the code must be changed before it can be deployed. Last three are optional.
 
@@ -53,9 +55,9 @@ In the AJAX code, (url: http://www.chakeda.com/cfeed/senddata.php), point it to 
 - database.php
 Put your database details here
 
-Simply make a directory /cfeed/ in your web root folder, and drop all the cfeed files in it. Then go to /cfeed/index.php and simply follow the prompts. Now you are tracking your (and maybe others) web traffic for free open source style.
+Simply make a directory /cfeed/ in your web root folder, and drop all the cfeed files in it. Then go to /cfeed/index.php and simply follow the prompts. Now you are tracking your (or others) web traffic locally, free, open source-ly.
 
-Feel free to fork. I will improve cFeed when I feel like it
+Feel free to fork. I will improve cFeed when I feel like it :P
 
 
 =====
@@ -64,14 +66,11 @@ TODO
 
 =====
 
-Conceptual
- - Coloring of IPs for individual visitor tracking
- - Daily/Weekly/Monthly amount of website impressions count
- - Ability to host cFeed on the user’s website, so they can see the feed on their own website instead of chakeda.com
- - Visitor’s time spent on the website until next imp
- - Further traffic analysis, like Statcounter’s graphs
-
-Simple
+ - Coloring of IPs for easier individual visitor tracking
+ - Count the Daily/Weekly/Monthly amount of website impressions and display neatly
+ - Installment interface instead of editing the three files
+ - Visitor’s time spent on the website until next impression
+ - Further traffic analysis, such as graphs
  - Limit on display length of URL 
  - SQL different ORDER BY commands through click on table header
  - SQL table speed/data optimization
