@@ -5,7 +5,9 @@ Open Source Live Website Traffic Feed
 
 =====
 
-http://imgur.com/JwA0LkC
+cFeed in action
+
+![alt tag](http://i.imgur.com/JwA0LkC.png)
 
 =====
 
