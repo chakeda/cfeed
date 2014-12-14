@@ -35,6 +35,8 @@ HOW TO USE: Written July 31st
 
 chakeda.com (where cFeed was formerly hosted) has been offline since June 24th. cFeed is still here on Github, and is deployable locally or on your website if you want open source web traffic monitoring. You will need a website/server, PHP 5.3, and MySQL 5.x
 
+EDIT 12/14/14: cFeed is now hosted at: http://www.kitechristianson.com/cfeed/
+
 However, 3 things in the code must be changed before it can be deployed. Last three are optional.
 
  - cfeed_members.sql (optional)
@@ -66,6 +68,7 @@ TODO
 
 =====
 
+ - EDIT 12/14/14: Deployability can be enhanced considerably. 
  - Coloring of IPs for easier individual visitor tracking
  - Count the Daily/Weekly/Monthly amount of website impressions and display neatly
  - Installment interface instead of editing the three files
