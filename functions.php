@@ -44,7 +44,7 @@ class functions extends database {
 			return $script_code;
 	}
 	
-	// 12-15-14: This does not build a table on kitechristianson domain. Restrictions on database priviledges? 
+	// 12-16-14: fixed table creation issue: missing comma
 	public function createWebsiteFeedTable($website){
 			$conn = parent::connect();
 			$sql = "CREATE TABLE 
@@ -58,7 +58,7 @@ class functions extends database {
 				`website` VARCHAR(100) NOT NULL,
 				`favicon` VARCHAR(100) NOT NULL,
 				`country` VARCHAR(100) NOT NULL,
-				`city` VARCHAR(100) NOT NULL
+				`city` VARCHAR(100) NOT NULL,
 				PRIMARY KEY (`id`)
 				)"; 
 			mysqli_query($conn,$sql);
