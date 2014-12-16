@@ -4,16 +4,18 @@ require('functions.php');
 
 $functions = new functions();
 
+// clean website string, encrypt password
 $website = $_POST['website'];
 $website = $functions->stripDots($website);
 $website = $functions->striphttp($website);
 $website = $functions->stripSlash($website);
+$password = md5($_POST['password']);
 
-$password = $_POST['password'];
-
+// build database for new user
 $functions->newUser($website, $password); 
-$functions->createWebsiteFeedTable($website, $password); 
+$functions->createWebsiteFeedTable($website); 
 
+// build the script for the user. 
 $platform = $_POST['platform'];
 $script_code = $functions->generateCode($platform);
 
@@ -25,7 +27,7 @@ $script_code = $functions->generateCode($platform);
 <pre><? echo $script_code; ?></pre>
 <br />
 <br />
-<p>You can access your live traffic feed <?php echo '<a href="http://www.chakeda.com/cfeed/live.php?website='.$website.'">Here</a>.'; ?></p>
+<p>You can access your live traffic feed <?php echo '<a href="http://www.kitechristianson.com/cfeed/live.php?website='.$website.'">Here</a>.'; ?></p>
 <p>It is recommended you bookmark that page.</p>
 
 <?php

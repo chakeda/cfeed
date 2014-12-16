@@ -6,9 +6,9 @@ $website = $_GET['website'];
 
 ?>
 <script type="text/javascript">
-// Prints the Database Traffic Data on click of the <div data>
-var website = "<? echo $website; ?>";
+var website = "<? echo $website; ?>"; // this here some voodoo shit: passes php variable to javascript. 
 
+/* ---- Removed due to possiblility of massing: this retrieves traffic every page click on live.php
 $(document).ready(function() {
     $('#data').click(function() {
         $.ajax({
@@ -29,6 +29,9 @@ $(document).ready(function() {
         });
     });
 });
+---- */
+
+// Prints the Database Traffic Data  on page load
 $(document).ready(function() { 
 
     window.onload=function(){
@@ -56,8 +59,9 @@ $(document).ready(function() {
 
 if (isset($_GET['website']))
 {
-    echo "<br /><br /><p>Tracking Website Traffic Live for ".$website.".</p><hr />";
-    echo '<div id="data"><br /><h3>Click here to refresh your feed.</h3><br /></div>';
+    echo "<br /><br /><p>Tracking Website Traffic Live for ".$website.".</p>";
+    // echo "<p>Do you own ".$website."? <a href='lock.php'>Privatize your feed</a></p><hr />";
+    echo '<div id="data"></div>';
 }
 else
 {

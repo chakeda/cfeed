@@ -25,8 +25,10 @@ class feed extends functions{
         $conn = parent::connect();
         $sql = "SELECT * FROM cfeed_".$website." ORDER BY `id` DESC LIMIT 100";
         $result=mysqli_query($conn,$sql);
+        if (empty($result)){
+            return "";
+        }
         for ($data = array (); $row = $result->fetch_assoc(); $data[] = $row); // Associative array of entire database (limit 100)
-        // Above loop returns a PHP error when there is no data in database 
         $conn = parent::close();
         return $data;             
     }
@@ -68,6 +70,9 @@ class feed extends functions{
     }
     
     public function parseData($data){ // Outputs live feed stuff, $data comes from getData, getData comes from sendData. Works. 
+        if (empty($data)){
+            return "You don't have any data yet.";
+        }
         $result = ' <div class="favicon"><u>Referrer Favicon</u></div>
                     <div class="ip"><u>IP</u></div>
                     <div class="country"><u>Country</u></div>

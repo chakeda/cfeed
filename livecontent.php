@@ -4,6 +4,7 @@ require('feed.php');
 
 $feed = new feed();
 
+// get data from POST or GET
 if (isset($_POST['website'])){
     $website = $_POST['website'];
     $data = $feed->getData($website); // data retrieved as array from database
@@ -16,7 +17,6 @@ if (isset($_POST['website'])){
     die("<br /><p>A website to track was not given.</p>");
 }
 
-echo "<br /><h3>Click here to refresh your feed.</h3><br />";
 echo $trafficData; // The first 30 visitor datas will be echoed by <div id="data"> in 'live.php' .
 
 ?>

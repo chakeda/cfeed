@@ -5,7 +5,7 @@ class database{
 	private $conn;
 	
 	public function __construct($conn="") {
-		$this->conn = mysqli_connect("","","","") or die(mysql_error());
+		$this->conn = mysqli_connect() or die(mysql_error());
 	}
 	
 	public function connect() {
